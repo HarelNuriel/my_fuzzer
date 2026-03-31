@@ -7,6 +7,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(SOURCE_FILES main.c
                 include/fuzz.h
                 src/fuzz.c
+                include/mutator.h
+                src/mutator.c
                 )
 
 add_executable(fuzzer ${SOURCE_FILES})

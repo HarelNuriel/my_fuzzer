@@ -16,13 +16,13 @@
 #define CHARS_LEN 12
 #define STRS_LEN 4
 
-uint64_t max_len = 4096;
+static uint64_t max_len = 4096;
 
 char *mutate_string(char *str);
 
 // Adding \u0000 prompts an error.
-char *special_strs[STRS_LEN] = {"%s", "%d", "%n", "\uFEFF"};
-char special_chars[CHARS_LEN] = {'"', '(', ')', ':', '\'', ';',
-                                 '<', '>', '&', '|', '\\', '/'};
+static char *special_strs[STRS_LEN] = {"%s", "%d", "%n", "\uFEFF"};
+static char special_chars[CHARS_LEN] = {'"', '(', ')', ':', '\'', ';',
+                                        '<', '>', '&', '|', '\\', '/'};
 
 #endif // !pthread_mutexattr_t

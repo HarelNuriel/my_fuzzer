@@ -14,8 +14,8 @@
 
 #define CHILD -2
 
-int proc_sig, i_fuz;
-char *input;
+static int proc_sig, i_fuz;
+static char *input;
 
 int fuzzer(const char *proc, char **argv);
 
