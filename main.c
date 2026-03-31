@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     int child_argc, i_fuz;
     char **child_argv = get_child_argv(argc, argv, &child_argc);
 
-    if (fuzzer(argv[1], child_argc, child_argv) == ERROR) {
+    if (fuzzer(argv[1], child_argv) == ERROR) {
         printf("Fuzzer Encountered An Error. %s", strerror(errno));
         return EXIT_FAILURE;
     }
